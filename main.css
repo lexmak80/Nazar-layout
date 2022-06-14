@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+* {
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+.wrapper {
+  font-family: "Open sans";
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1112px;
+  margin: 0px auto;
+}
+
+/* header__nav */
+
+.nav__row {
+  display: flex;
+  padding: 30px 0px 0px 0px;
+  flex-wrap: wrap;
+}
+.nav__logo {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 21.79px;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 0.05em;
+  padding-right: 413px;
+}
+
+.nav__list a {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  padding-right: 58px;
+}
+
+.nav__list a:last-child {
+  padding-right: 100px;
+}
+
+/* header__text */
+
+.header__text {
+  padding-top: 111px;
+}
+.text__row {
+  display: flex;
+  justify-content: space-between;
+}
+.text__item {
+  padding-top: 50px;
+}
+.text__label {
+  width: 401px;
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-bottom: 29px;
+}
+.text__sublabel {
+  width: 445px;
+  padding-bottom: 29px;
+}
+.text__btn {
+  background: #000;
+  width: 150px;
+  text-align: center;
+  padding: 10px 0px 10px 0;
+}
+
+.text__btn a {
+  color: white;
+}
+
+.product__row {
+  padding-top: 50px;
+}
+.product__item {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 70px;
+}
+
+.product__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  /* identical to box height */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.product__image {
+  background: #f6f6f6;
+}
+.product__label {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+.product__price {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-top: 4px;
+}
+
+.order {
+}
+.subscribe {
+}
+.subscribe__row {
+  display: flex;
+  justify-content: center;
+}
+.subscribe__field {
+  padding-top: 292px;
+}
+.subscribe__text {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: 600px;
+}
+.subscribe__send {
+  padding-top: 30px;
+}
+.subscribe__image {
+  padding-top: 216px;
+}
+
+.email {
+  background-image: linear-gradient(0deg, #9c27b0 2px, rgba(156, 39, 176, 0) 0),
+    linear-gradient(0deg, #d2d2d2 1px, hsla(0, 0%, 82%, 0) 0);
+  background-size: 0% 100%, 100% 100%;
+  border: 0px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease-in;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  width: 400px;
+  margin-right: 20px;
+}
+
+input:focus {
+  background-size: 100% 100%, 100% 100%;
+}
+
+.btn__subscribe {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
